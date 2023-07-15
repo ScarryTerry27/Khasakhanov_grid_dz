@@ -1,0 +1,177 @@
+:root {
+    --first-color:  rgb(2, 101, 88);
+    --second-color: rgb(3, 138, 120);
+    --third-color: rgb(185, 185, 185);
+    --white-color: white;
+}
+
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-areas: 
+    'header header header header header'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main'
+    'main main main main main';
+    overflow-x: scroll;
+    background-color: var(--second-color);
+}
+
+.main_header {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    background-color:var(--first-color);
+    color: var(--white-color);
+    grid-area: header;
+    z-index: 1;
+}
+
+.main_header>p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.main_container {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    grid-area: main;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.main_container>div {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 400px;
+    min-width: 300px;
+    margin: 10px 10px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    height: 90%;
+    background-color: var(--third-color);
+}
+
+.main_container>div>* {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.tasks>div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    min-height: 200px;
+    border: solid rgb(138, 138, 138) 1px;
+    box-shadow: 1px 1px 3px var(--third-color);
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+
+.txt  {
+    padding: 20px;
+    padding-right: 30px;
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+.icons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons>:nth-child(2) {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.icons>.main {
+   display: flex;
+   position: relative;
+   bottom: 35px;
+   left: 15px;
+   width: auto;
+   justify-content: space-between;
+}
+.icons>.main>div {
+    margin-left: 7px;
+}
+.icons>.main>.justify,
+.icons>.main>.checkbox,
+.icons>.main>.attach,
+.icons>.main>.comments{
+    width: 15px;
+    height: 15px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icons>.main>.justify{
+    background-image: url(./img/justify_26.png);
+}
+
+.icons>.main>.checkbox{
+    background-image: url(./img/checkbox_26.png);
+}
+
+.icons>.main>.attach{
+    background-image: url(./img/attach_26.png);
+}
+
+.icons>.main>.comments{
+    background-image: url(./img/comments_26.png);
+}
+
+.user1 {
+    background-image: url(./img/avatar_1.png);
+}
+
+.user2 {
+    background-image: url(./img/avatar_2.png);
+}
+
+.user3 {
+    background-image: url(./img/avatar_3.png);
+}
+
+.user4 {
+    background-image: url(./img/avatar_4.png);
+}
